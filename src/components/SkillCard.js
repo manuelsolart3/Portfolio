@@ -10,7 +10,7 @@ export default function SkillCard({id}) {
   return (
     <>
         <div className="skill-container" id = {id}>
-          <div className="skill-header">My Skills</div>
+          <div className="sections">My Skills</div>
           <div className="skill-box">
             <h2>Languages</h2>
             <div className="skillset">

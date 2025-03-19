@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+:root {
+  --color-cream: #ffe1a0;
+  --color-pink: #f67280;
+  --color-magenta: #F94892;
+  --gradient: linear-gradient(45deg, var(--color-cream), var(--color-pink), var(--color-magenta));
+  --bg-dark: #0a0a0a;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+}
 *{
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +18,20 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
-
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+  
+  .sections{
+    background-image: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 750;
+  }
 body {
   background: black;
   /* background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%); */
@@ -29,7 +50,9 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #F94892;
+  background-color: transparent;
+  border: 2px solid var(--color-pink);
+  color: #fff;
   width: fit-content;
   padding: 15px 25px;
   color: #fff;
@@ -43,9 +66,10 @@ ul {
 }
 
 .btn:hover {
-  background-color: #F94892;
-  bottom: 12px;
-  box-shadow: 0 0 20px 1px rgba(205, 106, 139, 0.65);
+  background-image: var(--gradient);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 15px rgba(249, 72, 146, 0.4);
 }
 
 .btn:active {

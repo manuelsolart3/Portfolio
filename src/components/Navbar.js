@@ -2,86 +2,84 @@ import React, { useState } from "react";
 import "./NavbarStyle.css";
 import { Link } from "react-scroll";
 
-
 export default function Navbar() {
   const [click, setClick] = useState(false);
-  const handleCLick = () => setClick(!click);
+  const handleClick = () => setClick(!click);
   const [activeSection, setActiveSection] = useState("home");
 
   return (
-    <nav className="header">
+    <div className="header">
       <div className="logo">
-        <Link
-          activeClass="active"
-          to="home"
-          spy={true}
-          smooth={true}
-          duration={30}
-          onSetActive={() => setActiveSection("home")}
-        >
-          <div className="logo-img">
-            <span className="blink">&lt;</span>
-            <span>&#47;</span>My Portfolio<span className="blink">&gt;</span>
-          </div>
-        </Link>
+        <div className="logo-img">
+          My<span className="blink">Portfolio</span>
+        </div>
       </div>
-      <ul
-        className={click ? "nav-menu active" : "nav-menu"}
-        onClick={handleCLick}
-      >
+
+      <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li>
           <Link
-            className={`navLink ${activeSection === "project" ? "active" : ""}`}
-            activeClass="active"
-            to="project"
-            spy={true}
+            className={activeSection === "home" ? "navLink active" : "navLink"}
+            to="home"
             smooth={true}
-            duration={30}
-            onSetActive={() => setActiveSection("project")}
+            duration={300}
+            onClick={() => setActiveSection("home")}
+          >
+            Home
+          </Link>
+        </li>
+
+        <li>
+          <Link
+            className={activeSection === "project" ? "navLink active" : "navLink"}
+            to="project"
+            smooth={true}
+            duration={300}
+            onClick={() => setActiveSection("project")}
           >
             Projects
           </Link>
         </li>
+
         <li>
           <Link
-            className={`navLink ${activeSection === "about" ? "active" : ""}`}
-            activeClass="active"
+            className={activeSection === "about" ? "navLink active" : "navLink"}
             to="about"
-            spy={true}
             smooth={true}
-            duration={30}
-            onSetActive={() => setActiveSection("about")}
+            duration={300}
+            onClick={() => setActiveSection("about")}
           >
             About
           </Link>
         </li>
+
         <li>
           <Link
-                  className={`navLink ${activeSection === "skills" ? "active" : ""}`}
-            activeClass="active"
+            className={activeSection === "skills" ? "navLink active" : "navLink"}
             to="skills"
-            spy={true}
             smooth={true}
-            duration={30}
-            onSetActive={() => setActiveSection("skills")}
+            duration={300}
+            onClick={() => setActiveSection("skills")}
           >
             Skills
           </Link>
         </li>
+
         <li>
           <Link
-            className={`navLink ${activeSection === "contact" ? "active" : ""}`}
-            activeClass="active"
+            className={activeSection === "contact" ? "navLink active" : "navLink"}
             to="contact"
-            spy={true}
             smooth={true}
-            duration={30}
-            onSetActive={() => setActiveSection("contact")}
+            duration={300}
+            onClick={() => setActiveSection("contact")}
           >
             Contact
           </Link>
         </li>
       </ul>
-    </nav>
+
+      <div className="hamburger" onClick={handleClick}>
+        <div className="bars">{click ? "✕" : "☰"}</div>
+      </div>
+    </div>
   );
 }

@@ -3,7 +3,7 @@ import './ContactFormStyle.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
-import cartoon from '../images/cartoon-compressed.png';
+import cartoon from '../images/memoji.svg';
 
 export default function ContactForm({ id }) {
   const form = useRef();
@@ -44,7 +44,7 @@ export default function ContactForm({ id }) {
 
   return (
     <div className='contact-window' id={id}>
-      <h1>Let's Get in Touch.</h1>
+      <h1 className='sections'>Let's Get in Touch.</h1>
       <p>Discuss a project or just want to say Hi? My inbox is open for all.</p>
       <div className="contact-container">
         <img src={cartoon} alt='Deepa Jha' className="contact-wrapper-left"></img>        

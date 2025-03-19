@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import HomeBanner from "./components/HomeBanner";
 import ProjectCard from './components/ProjectCard'
-import AboutMe from './components/AboutMe'
+import Experience from './components/Experience'
 import SkillCard from './components/SkillCard'
 import ContactForm from './components/ContactForm'
 import AnimatedCursor from "react-animated-cursor"
@@ -13,7 +13,8 @@ import AnimatedCursor from "react-animated-cursor"
 function App() {
   return (
     <>
-    <AnimatedCursor
+    
+    {/* <AnimatedCursor
       color="#fff"
       innerSize={5}
       outerSize={25}
@@ -27,37 +28,48 @@ function App() {
       innerStyle={{
         backgroundColor: '#ffe1a0'
       }}
-    />
+    /> */}
     <div>
       <Navbar />
       <HomeBanner id = "home"/>
       <ProjectCard
         id = "project"
         className = "odd"
-        projectTitle="Wiggles: Pet Care Made Easy"
-        projectDesc="A one-stop solution for pet data management, automated vaccinations, QR-based lost pet recovery, and organizing pet playdates."
-        projectLink="https://github.com/DevanshSahni/Wiggles"
-        deployedProjectLink="https://wiggles.vercel.app"
-        projectImg={require('./images/projectWiggles.jpg')}
+        projectTitle="SenaThreads: Internal Social Network"
+        projectDesc="A platform that connects +300 employees from departments that previously did not interact, built from scratch using Clean Architecture."
+        projectLink="https://github.com/manuelsolart3/SenaThreads"
+        deployedProjectLink="https://test-sena-book.vercel.app/auth/"
+        projectImg={require('./images/SenaThreads.png')}
       />
 
       <ProjectCard
-        projectTitle="Animated Card: featuring the latest glassmorphism trend"
+        projectTitle="Bpo Labs"
         projectDesc="React JS provided me the flexibility needed to create an interactive card with a glass-like effect, which adds a sense of depth and dimension to the user interface"
-        projectLink="https://github.com/Deepajha14/Touch-me-not-Card"
-        deployedProjectLink="https://deepajha14.github.io/Touch-me-not-Card/"
-        projectImg={require('./images/projectGlassmorphism.png')}
+        projectLink="https://github.com/manuelsolart3/Bpo_API"
+        deployedProjectLink="https://bpolabsolutions.com"
+        projectImg={require('./images/BpoLabs2.png')}
       />
-
+ <ProjectCard
+        id = "project"
+        className = "odd"
+        projectTitle="SenaThreads: Internal Social Network"
+        projectDesc="A platform that connects +300 employees from departments that previously did not interact, built from scratch using Clean Architecture."
+        projectLink="https://github.com/manuelsolart3/SenaThreads"
+        deployedProjectLink="https://test-sena-book.vercel.app/auth/"
+        projectImg={require('./images/SenaThreads.png')}
+      />
       <ProjectCard
         className = "odd"
-        projectTitle="Rog-free: accessible anytime, anywhere"
+        projectTitle="Educatio MobileApp-Landing Page & Dashboard"
         projectDesc="An approach to target and heal specific health conditions by transforming the living room into a yoga studio"
-        projectLink="https://github.com/Deepajha14/Rog-Free"
-        deployedProjectLink="https://deepajha14.github.io/Rog-Free/"
-        projectImg={require('./images/projectRogfree.png')}
+        projectLink="https://github.com/manuelsolart3/EducatioApp"
+        deployedProjectLink="https://educatioweb.vercel.app/home"
+        projectImg={require('./images/Educatio.png')}
       />
-      <AboutMe id = 'about' />
+
+      
+      
+      <Experience id = 'experience' />
       <SkillCard id = 'skills' />
       <ContactForm id = 'contact' />
       <Footer />

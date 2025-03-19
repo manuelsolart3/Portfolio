@@ -1,3 +1,12 @@
+:root {
+    --color-cream: #ffe1a0;
+    --color-pink: #f67280;
+    --color-magenta: #F94892;
+    --gradient: linear-gradient(45deg, var(--color-cream), var(--color-pink), var(--color-magenta));
+    --bg-dark: #0a0a0a;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+  }
 .project-window {
     width: 100%;
     padding: 160px 7vw 0 15vw;
@@ -134,6 +143,7 @@
     .about-project .btn {
         font-size: 16px;
     }
+    
 
     .project-img {
         margin: 0;
