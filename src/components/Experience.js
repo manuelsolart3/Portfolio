@@ -1,12 +1,13 @@
 import React from "react";
 import "./ExperienceStyle.css";
 import { FaCode, FaUsers, FaRocket, FaDatabase } from "react-icons/fa";
+import './SharedStyles.css'; 
 
 export default function Experience({ id }) {
   return (
     <div className="experience-container" id={id}>
       <div className="experience-header">
-        <h1 className="sections"> My Experience</h1>
+        <h1 className="section-title"> My Experience</h1>
         <p className="experience-tagline">Transformando desafíos en soluciones de alto impacto</p>
       </div>
       

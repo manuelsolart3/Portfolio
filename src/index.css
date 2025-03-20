@@ -25,13 +25,6 @@ h1 {
   letter-spacing: 0.5px;
 }
   
-  .sections{
-    background-image: var(--gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 750;
-  }
 body {
   background: black;
   /* background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%); */

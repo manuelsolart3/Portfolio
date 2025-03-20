@@ -1,0 +1,30 @@
+.section-title {
+    color: var(--text-primary);
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+  }
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 36px;
+    }
+  }

@@ -1,12 +1,7 @@
 :root{
 --gradient: linear-gradient(45deg, var(--color-cream), var(--color-pink), var(--color-magenta));
 }
-h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.5px;
-}
+
 .experience-container {
     padding: 80px 10vw;
     color: #fff;
@@ -88,17 +83,6 @@ h1 {
     padding-bottom: 25px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
-  .project-title {
-    font-size: 20px;
-    color: #FF9E80;
-    margin-bottom: 20px;
-    font-weight: 00;
-  }
-  
-.project-title:hover {
-  color: var(--color-pink); 
-}
   
   .achievement-container {
     display: flex;

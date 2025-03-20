@@ -42,20 +42,26 @@ body {
 
 .content-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2rem;
 }
 
-/* Sección de perfil */
-.profile-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
+/* Layout reorganizado */
+.profile-info {
+  flex: 1;
+  order: 1;
 }
 
+.profile-section {
+  flex: 1;
+  order: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Sección de perfil */
 .photo-container {
   width: 300px;
   height: 400px;
@@ -104,17 +110,15 @@ body {
 /* Sección de contenido */
 .content-section {
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .intro {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 h1 {
   font-size: 3rem;
-  font-weight: 700;
   margin-bottom: 1.5rem;
   letter-spacing: 0.5px;
 }
@@ -124,7 +128,7 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 750;
+  font-weight: 800; /* Mismo grosor que el rol de desarrollador */
 }
 
 .title-container {
@@ -140,7 +144,6 @@ h1 {
 
 .role-main {
   display: flex;
-  justify-content: center;
   gap: 0.6rem;
   font-size: 3.5rem;
   font-weight: 800;
@@ -173,10 +176,8 @@ h1 {
   line-height: 1.5;
   color: var(--text-secondary);
   margin-bottom: 2.5rem;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
 }
+
 .highlight {
   color: var(--color-cream); 
   font-weight: bold;
@@ -192,13 +193,13 @@ h1 {
 
 .flag {
   font-size: 1.2rem; 
+  vertical-align: middle;
 }
-
 
 /* Botones */
 .button-group {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.5rem;
   margin-bottom: 3rem;
 }
@@ -218,7 +219,6 @@ h1 {
   background-image: var(--gradient);
   color: #fff;
   border: none;
-  box-shadow: 0 4px 15px rgba(249, 72, 146, 0.4);
 }
 
 .btn.contact {
@@ -235,7 +235,7 @@ h1 {
 /* Iconos sociales */
 .social-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.5rem;
 }
 
@@ -324,6 +324,24 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column-reverse;
+  }
+  
+  .profile-section,
+  .profile-info {
+    order: unset;
+  }
+  
+  .content-section {
+    text-align: center;
+  }
+  
+  .button-group,
+  .social-links {
+    justify-content: center;
+  }
+  
   .container {
     padding: 0 1.5rem;
   }
@@ -334,6 +352,7 @@ h1 {
   
   .role-main {
     font-size: 2.5rem;
+    justify-content: center;
   }
   
   .description {
