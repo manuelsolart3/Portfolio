@@ -30,33 +30,40 @@ function App() {
       <div>
         <Navbar />
         <HomeBanner id="home" />
+
+      
+       
         <ProjectCard
           id="project"
-          className="odd"
-          projectTitle="SenaThreads: Internal Social Network"
-          projectDesc="A platform that connects +300 employees from departments that previously did not interact, built from scratch using Clean Architecture."
-          projectLink="https://github.com/manuelsolart3/SenaThreads"
-          deployedProjectLink="https://test-sena-book.vercel.app/auth/"
-          projectImg={require("./images/SenaThreads.png")}
-        />
-
-        <ProjectCard
-          id="project2"
           projectTitle="Bpo Labs"
           projectDesc="React JS provided me the flexibility needed to create an interactive card with a glass-like effect, which adds a sense of depth and dimension to the user interface"
           projectLink="https://github.com/manuelsolart3/Bpo_API"
           deployedProjectLink="https://bpolabsolutions.com"
           projectImg={require("./images/BpoLabs2.png")}
+          tools={["React", "Three.js", "GSAP", "Tailwind CSS"]}
         />
-        <ProjectCard
-          id="project3"
+      
+          <ProjectCard
+          id="project2"
           className="odd"
           projectTitle="SenaThreads: Internal Social Network"
           projectDesc="A platform that connects +300 employees from departments that previously did not interact, built from scratch using Clean Architecture."
           projectLink="https://github.com/manuelsolart3/SenaThreads"
           deployedProjectLink="https://test-sena-book.vercel.app/auth/"
           projectImg={require("./images/SenaThreads.png")}
+          tools={["React", "Three.js", "GSAP", "Tailwind CSS"]}
         />
+
+<ProjectCard
+          id="project3"
+          projectTitle="Bpo Labs"
+          projectDesc="React JS provided me the flexibility needed to create an interactive card with a glass-like effect, which adds a sense of depth and dimension to the user interface"
+          projectLink="https://github.com/manuelsolart3/Bpo_API"
+          deployedProjectLink="https://bpolabsolutions.com"
+          projectImg={require("./images/BpoLabs2.png")}
+          tools={["React", "CSS3", "JavaScript", "Node.js", "Express"]}
+        />
+      
         <ProjectCard
           id="project4"
           className="odd"
@@ -65,6 +72,7 @@ function App() {
           projectLink="https://github.com/manuelsolart3/EducatioApp"
           deployedProjectLink="https://educatioweb.vercel.app/home"
           projectImg={require("./images/Educatio.png")}
+          tools={["React", "Three.js", "GSAP", "Tailwind CSS"]}
         />
 
         <Experience id="experience" />

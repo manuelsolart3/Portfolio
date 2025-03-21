@@ -1,15 +1,13 @@
 import React from 'react';
 import "./ProjectCardStyle.css";
 import {FaArrowRight} from "react-icons/fa";
-import {FiGithub} from "react-icons/fi";
-import {MdOutlinePreview} from "react-icons/md";
+import {FiGithub  } from "react-icons/fi";
+import { TbScreenShare } from "react-icons/tb";
 import Tilt from 'react-parallax-tilt';
 
 const ProjectsTitle = () => {
   return (
-    <div className="section-title">
-      <h1 className="projects-main-title">MY PROJECTS</h1>
-    </div>
+    <h1 className="section-title"> My Projects</h1>
   );
 };
 
@@ -35,13 +33,28 @@ export default function ProjectCard(props) {
           <div className="about-project">
             <h2 className="project-title">{props.projectTitle}</h2>
             <div className="desc">{props.projectDesc}</div>
+            
+            {/* Nuevo componente para mostrar las herramientas */}
+            {props.tools && props.tools.length > 0 && (
+              <div className="project-tools">
+                <h3 className="tools-title">Technologies</h3>
+                <div className="tools-container">
+                  {props.tools.map((tool, index) => (
+                    <span key={index} className="tool-badge">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+            
             <div className="project-buttons">
               <button className='btns' onClick={handleGithubClick}>
-                <span>View on<FiGithub className="social" size={22} style={{ marginLeft: "10px", position: "relative", top: "2px", strokeWidth: "3" }}/></span>
+                <span>View on<FiGithub   className="social" size={21} style={{ marginLeft: "10px", position: "relative", top: "2px", strokeWidth: "3" }}/></span>
                 <FaArrowRight className='btn-arrow' size={24} style={{marginLeft: "1.2rem"}}/>
               </button>
               <button className='btns' onClick={handleDemoClick}>
-                <span>Demo<MdOutlinePreview size={22} style={{ marginLeft: "10px", position: "relative", top: "2px" }}/></span>
+                <span>Demo<TbScreenShare  size={21} style={{ marginLeft: "10px", position: "relative", top: "2px" ,  strokeWidth: "3"}}/></span>
                 <FaArrowRight className='btn-arrow' size={24} style={{marginLeft: "1.2rem"}}/>
               </button>
             </div>

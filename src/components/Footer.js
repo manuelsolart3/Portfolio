@@ -9,7 +9,7 @@ export default function Footer() {
   }
   return (
     <div className='footer'>
-        By Manuel Solarte <span style={styleSymbol}>©</span> 2025
+      Gracias por tomarte el tiempo para visitarme<span style={styleSymbol}>©</span> 2025
     </div>
   )
 }

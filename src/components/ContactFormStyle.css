@@ -18,7 +18,7 @@
   /* Optimized decorative elements */
   .contact-section::before {
     content: "";
-    position: fixed; /* Changed from absolute to fixed to improve performance */
+    position: fixed; 
     width: 300px;
     height: 300px;
     background: rgba(249, 72, 146, 0.08);
@@ -26,15 +26,16 @@
     top: 10%;
     right: -100px;
     z-index: 0;
-    pointer-events: none; /* Prevents any interaction with this element */
-    will-change: opacity; /* Hint to browser for optimization */
+    pointer-events: none; 
+    will-change: opacity; 
   }
   
   .contact-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
+
   }
   
   .contact-header {
@@ -189,7 +190,7 @@
   }
   
   .form-label {
-    font-size: 14px;
+    font-size: 18px;
     color: var(--color-cream);
     font-weight: 500;
     margin-left: 2px;
