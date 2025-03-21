@@ -1,138 +1,275 @@
 :root {
-    --color-cream: #ffe1a0;
+  --color-cream: #ffe1a0;
   --color-pink: #f67280;
   --color-magenta: #F94892;
-    --gradient: linear-gradient(45deg, var(--color-cream), var(--color-pink), var(--color-magenta));
+  --gradient: linear-gradient(45deg, var(--color-cream), var(--color-pink), var(--color-magenta));
+  --bg-dark: #0a0a0a;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-image: var(--gradient);
+  border-radius: 2px;
+}
+
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.skill-box {
+  width: 100%;
+}
+
+.skill-box h2 {
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skillset {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 25px;
+  justify-content: start;
+}
+
+.tech-icon-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  overflow: visible; /* Permite que se vea el borde fuera del contenedor */
+}
+
+/* Capa para el fondo con gradiente */
+.tech-icon-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--gradient);
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+}
+
+/* Borde blanco exterior perfectamente centrado */
+.tech-icon-container::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid #ffffff;
+  border-radius: 19px; /* Ligeramente más grande que el contenedor */
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+  z-index: -1;
+  box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.5); /* Sombra blanca */
+}
+
+/* Reducimos la escala en hover para evitar tapar el nombre */
+.tech-wrapper:hover .tech-icon-container {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(249, 72, 146, 0.4);
+}
+
+.tech-wrapper:hover .tech-icon-container::before {
+  opacity: 1;
+}
+
+/* Animación del borde blanco */
+.tech-wrapper:hover .tech-icon-container::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.techLogo {
+  width: 55px;
+  height: 55px;
+  transition: all 0.3s ease;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.tech-wrapper:hover .techLogo {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Ajustamos la posición del nombre para que no sea tapado */
+.tech-name {
+  position: absolute;
+  bottom: -30px; 
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-10px);
+  text-align: center;
+  width: 100%;
+}
+
+.tech-wrapper:hover .tech-name {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ajustamos la altura del wrapper para acomodar el nombre */
+.tech-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  height: 130px;
+}
+/* Media Queries para diseño responsive */
+@media screen and (min-width: 768px) {
+  .skills-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
   }
   
-  .skill-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 50px;
-    margin: 50px 12vw 5vw 15vw;
+  .section-title {
+    font-size: 3rem;
   }
-  
-  .skill-container .sections {
-    font-size: 50px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 50px;
-  }
-  
-  .skill-container .skill-box {
-    width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .skills-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
   }
   
   .skill-box h2 {
-    color: #fff;
-    letter-spacing: 2px;
-    word-spacing: 3px;
+    font-size: 2rem;
   }
   
-  .skill-box .skillset {
-    margin: 25px 0 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px 30px;
+  .skillset {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
   
-  .tech-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .tech-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: var(--gradient);
-    opacity: 0;
-    z-index: -1;
-    border-radius: 15px;
-    transition: opacity 0.3s ease;
-  }
-  
-  .tech-wrapper:hover::before {
-    opacity: 1;
-  }
-  
-  .tech-wrapper:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(249, 72, 146, 0.3);
+  .tech-icon-container {
+    width: 110px;
+    height: 110px;
   }
   
   .techLogo {
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    height: 120px;
-    width: auto;
-    padding: 30px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    font-size: 60px;
-    color: #fff;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .skill-container {
+    padding: 60px 0;
   }
   
-  .tech-wrapper:hover .techLogo {
-    border: 2px solid rgb(255, 255, 255);
-    box-shadow: 0px 5px 20px 0px rgba(255, 255, 255, 0.4);
-    transform: scale(1.15);
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .skill-box h2 {
+    font-size: 1.5rem;
+  }
+  
+  .skillset {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 20px;
+  }
+  
+  .tech-icon-container {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .techLogo {
+    width: 45px;
+    height: 45px;
   }
   
   .tech-name {
-    position: absolute;
-    bottom: -30px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(-10px);
-    text-align: center;
-    width: 100%;
+    font-size: 12px;
+    bottom: -20px;
   }
   
-  .tech-wrapper:hover .tech-name {
-    opacity: 1;
-    transform: translateY(0);
+  .tech-wrapper {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-wrapper {
+    gap: 30px;
   }
   
-  abbr {
-    text-decoration: none;
+  .skillset {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
   }
   
-  @media screen and (max-width: 1040px), (max-height: 550px) {
-    .skill-container {
-      margin: 50px 7vw 0px 20vw;
-    }
+  .tech-icon-container {
+    width: 80px;
+    height: 80px;
   }
   
-  @media screen and (max-width: 750px) {
-    .skill-container {
-      padding-top: 80px;
-      margin: 0 50px 0px;
-    }
-    
-    .techLogo {
-      height: 80px;
-      padding: 14px;
-      font-size: 40px;
-    }
-    
-    .tech-name {
-      font-size: 14px;
-      bottom: -25px;
-    }
+  .techLogo {
+    width: 40px;
+    height: 40px;
   }
+  
+  .tech-wrapper {
+    height: 90px;
+  }
+}

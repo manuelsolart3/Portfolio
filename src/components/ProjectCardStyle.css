@@ -23,7 +23,7 @@
 
 .project-window {
   width: 100%;
-  padding: 300px 5vw 0 6vw;
+  padding: 0px 5vw 10vw 6vw;
   display: flex;
   justify-content: center;
   align-items: center;
