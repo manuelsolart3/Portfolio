@@ -117,22 +117,18 @@ body {
   max-width: 100%;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.5px;
-}
 
 .name {
   background-image: var(--gradient);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 800; /* Mismo grosor que el rol de desarrollador */
+  font-weight: 800;
+  margin: 0%;
 }
 
 .title-container {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .role-prefix {
@@ -145,7 +141,7 @@ h1 {
 .role-main {
   display: flex;
   gap: 0.6rem;
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 1.1;
 }
@@ -287,7 +283,7 @@ h1 {
 /* Responsive */
 @media screen and (min-width: 1200px) {
   .role-main {
-    font-size: 4.2rem;
+    font-size: 3rem;
   }
   
   h1 {
@@ -310,7 +306,7 @@ h1 {
   }
   
   h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
   }
   
   .role-prefix {
@@ -351,7 +347,7 @@ h1 {
   }
   
   .role-main {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     justify-content: center;
   }
   

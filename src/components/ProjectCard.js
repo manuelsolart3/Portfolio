@@ -7,7 +7,7 @@ import Tilt from 'react-parallax-tilt';
 
 const ProjectsTitle = () => {
   return (
-    <h1 className="section-title"> My Projects</h1>
+    <h1 className="section-title"> Mis Projectos</h1>
   );
 };
 
@@ -22,7 +22,6 @@ export default function ProjectCard(props) {
   
   const isEducatio = props.projectTitle.includes("Educatio");
   
-  // Renderiza el título general solo para el primer proyecto
   const isFirstProject = props.id === "project";
 
   return (
@@ -34,7 +33,7 @@ export default function ProjectCard(props) {
             <h2 className="project-title">{props.projectTitle}</h2>
             <div className="desc">{props.projectDesc}</div>
             
-            {/* Nuevo componente para mostrar las herramientas */}
+
             {props.tools && props.tools.length > 0 && (
               <div className="project-tools">
                 <h3 className="tools-title">Technologies</h3>

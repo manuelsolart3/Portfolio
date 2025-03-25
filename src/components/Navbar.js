@@ -36,19 +36,19 @@ export default function Navbar() {
             duration={300}
             onClick={() => setActiveSection("project")}
           >
-            Projects
+            Projectos
           </Link>
         </li>
 
         <li>
           <Link
-            className={activeSection === "about" ? "navLink active" : "navLink"}
-            to="about"
+            className={activeSection === "experience" ? "navLink active" : "navLink"}
+            to="experience"
             smooth={true}
             duration={300}
-            onClick={() => setActiveSection("about")}
+            onClick={() => setActiveSection("experience")}
           >
-            About
+            Experiencia
           </Link>
         </li>
 
@@ -60,7 +60,7 @@ export default function Navbar() {
             duration={300}
             onClick={() => setActiveSection("skills")}
           >
-            Skills
+            Habilidades
           </Link>
         </li>
 
@@ -72,7 +72,7 @@ export default function Navbar() {
             duration={300}
             onClick={() => setActiveSection("contact")}
           >
-            Contact
+            Contacto
           </Link>
         </li>
       </ul>

@@ -7,32 +7,13 @@ import ProjectCard from "./components/ProjectCard";
 import Experience from "./components/Experience";
 import SkillCard from "./components/SkillCard";
 import ContactForm from "./components/ContactForm";
-import AnimatedCursor from "react-animated-cursor";
-
 function App() {
   return (
     <>
-      {/* <AnimatedCursor
-      color="#fff"
-      innerSize={5}
-      outerSize={25}
-      innerScale={1.5}
-      outerScale={1.2}
-      outerAlpha={0}
-      outerStyle={{
-        background: 'rgba(255, 255, 255, 0.8)',
-        mixBlendMode: 'normal'
-      }}
-      innerStyle={{
-        backgroundColor: '#ffe1a0'
-      }}
-    /> */}
       <div>
         <Navbar />
         <HomeBanner id="home" />
 
-      
-       
         <ProjectCard
           id="project"
           projectTitle="Bpo Labs"
@@ -42,19 +23,36 @@ function App() {
           projectImg={require("./images/BpoLabs2.png")}
           tools={["React", "Three.js", "GSAP", "Tailwind CSS"]}
         />
-      
-          <ProjectCard
+
+        <ProjectCard
           id="project2"
           className="odd"
-          projectTitle="SenaThreads: Internal Social Network"
-          projectDesc="A platform that connects +300 employees from departments that previously did not interact, built from scratch using Clean Architecture."
+          projectTitle="SenaThreads | Red Social Empresarial"
+          projectDesc=" Desarrollé el backend de una aplicación que conecta a más de 300 empleados de distintas areas, creando un canal directo para compartir información, eventos y anuncios importantes,  mejorando la comunicación corporativa."
           projectLink="https://github.com/manuelsolart3/SenaThreads"
           deployedProjectLink="https://test-sena-book.vercel.app/auth/"
           projectImg={require("./images/SenaThreads.png")}
-          tools={["React", "Three.js", "GSAP", "Tailwind CSS"]}
+          tools={[
+            ".NET & C#",
+            "ASP.NET Core",
+            "Entity Framework Core",
+            "JWT",
+            "xUnit/NUnit Testing",
+            "SQL Server",
+          ]}
+          additionalImages={[
+
+            '../ima',
+        
+            '../images/OtraImagen1.png',
+        
+            '../images/OtraImagen2.png'
+        
+          ]}
+                
         />
 
-<ProjectCard
+        <ProjectCard
           id="project3"
           projectTitle="Bpo Labs"
           projectDesc="React JS provided me the flexibility needed to create an interactive card with a glass-like effect, which adds a sense of depth and dimension to the user interface"
@@ -63,7 +61,7 @@ function App() {
           projectImg={require("./images/BpoLabs2.png")}
           tools={["React", "CSS3", "JavaScript", "Node.js", "Express"]}
         />
-      
+
         <ProjectCard
           id="project4"
           className="odd"

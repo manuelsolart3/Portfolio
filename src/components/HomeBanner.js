@@ -24,9 +24,9 @@ export default function HomeBanner({ id }) {
 
                 <p className="description">
                   Desarrollador de Software de Popayán, Colombia{" "}
-                  <img src={colombia} alt="Bandera de Colombia" width="20" className="flag" />.
-                  <span className="highlight">{" "}Especializado en .NET, C#</span> y
-                  arquitecturas limpias para APIs escalables. Transformo{" "}
+                  <img src={colombia} alt="Bandera de Colombia" width="20" className="flag" />
+                  <span className="highlight">{" "}Especializado en .NET y C#</span> {" "}
+                 Enfocado en la creación de  arquitecturas limpias para APIs escalables. Transformo{" "}
                   requerimientos complejos en{" "}
                   <span className="bold">soluciones técnicas únicas</span>.
                 </p>
@@ -38,10 +38,10 @@ export default function HomeBanner({ id }) {
                     rel="noopener noreferrer"
                     className="btn hire"
                   >
-                    Hire Me
+                    Contratame
                   </a>
                   <a href="#contact" className="btn contact">
-                    Contact
+                    Contacto
                   </a>
                 </div>
 

@@ -158,9 +158,9 @@
   animation: underline 0.3s ease-in-out;
 }
 .navLink.active {
-    color: var(--color-cream); /* Cambia el color de la opción activa a cream */
+    color: var(--color-cream);
     position: relative;
-    font-weight: bold; /* (Opcional) para resaltar aún más */
+    font-weight: bold;
   }
 @keyframes underline {
   from {
@@ -188,7 +188,7 @@
   font-size: 24px;
 }
 
-@media screen and (max-width: 1000px), (max-height: 550px) {
+@media screen and (max-width: 1300px), (max-height: 550px) {
   .header {
     width: 100vw;
     height: auto;
