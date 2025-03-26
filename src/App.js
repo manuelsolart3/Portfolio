@@ -16,16 +16,6 @@ function App() {
 
         <ProjectCard
           id="project"
-          projectTitle="Bpo Labs"
-          projectDesc="React JS provided me the flexibility needed to create an interactive card with a glass-like effect, which adds a sense of depth and dimension to the user interface"
-          projectLink="https://github.com/manuelsolart3/Bpo_API"
-          deployedProjectLink="https://bpolabsolutions.com"
-          projectImg={require("./images/BpoLabs2.png")}
-          tools={["React", "Three.js", "GSAP", "Tailwind CSS"]}
-        />
-
-        <ProjectCard
-          id="project2"
           className="odd"
           projectTitle="SenaThreads | Red Social Empresarial"
           projectDesc=" Desarrollé el backend de una aplicación que conecta a más de 300 empleados de distintas areas, creando un canal directo para compartir información, eventos y anuncios importantes,  mejorando la comunicación corporativa."
@@ -42,24 +32,44 @@ function App() {
           ]}
           additionalImages={[
 
-            '../ima',
-        
-            '../images/OtraImagen1.png',
-        
-            '../images/OtraImagen2.png'
-        
+            require("./images/SenaThreadsHome.png"),
+            require("./images/SenaThreadsProfile.png"),
+            require("./images/SenaThreadsNotis.png"),
+            require("./images/SenaThreadsEvents.png"),
+            require("./images/SenaThreadsCreate.png"),
+            require("./images/SenaThreadsFollowers.png")
           ]}
-                
         />
 
+        <ProjectCard
+          id="project2"
+          projectTitle="SenaThreads | Red Social Empresarial"
+          projectDesc=" Desarrollé el backend de una aplicación que conecta a más de 300 empleados de distintas areas, creando un canal directo para compartir información, eventos y anuncios importantes,  mejorando la comunicación corporativa."
+          projectLink="https://github.com/manuelsolart3/SenaThreads"
+          deployedProjectLink="https://test-sena-book.vercel.app/auth/"
+          projectImg={require("./images/SenaThreads.png")}
+          tools={[
+            ".NET & C#",
+            "ASP.NET Core",
+            "Entity Framework Core",
+            "JWT",
+            "xUnit/NUnit Testing",
+            "SQL Server",
+          ]}
+        />
         <ProjectCard
           id="project3"
           projectTitle="Bpo Labs"
           projectDesc="React JS provided me the flexibility needed to create an interactive card with a glass-like effect, which adds a sense of depth and dimension to the user interface"
           projectLink="https://github.com/manuelsolart3/Bpo_API"
           deployedProjectLink="https://bpolabsolutions.com"
-          projectImg={require("./images/BpoLabs2.png")}
+          projectImg={require("./images//Marvel-landscape.png")}
           tools={["React", "CSS3", "JavaScript", "Node.js", "Express"]}
+          additionalImages={[
+            require("./images/loginMarvel.png"),
+            require("./images/Marvel-front.png"),
+            require("./images/FavoriteMarvel.png"),
+          ]}
         />
 
         <ProjectCard
