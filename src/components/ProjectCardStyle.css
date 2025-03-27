@@ -292,6 +292,62 @@
   color: #F94892;
   font-size: 17px;
 }
+.project-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+}
+
+.gallery-btn {
+  background-color: rgba(255, 158, 128, 0.1);
+  border: 1px solid rgba(255, 158, 128, 0.2);
+  color: #FF9E80;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.gallery-btn:hover {
+  background-color: rgba(255, 158, 128, 0.2);
+  transform: scale(1.1);
+}
+
+.gallery-btn svg {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 950px) {
+  .project-header {
+    justify-content: center;
+  }
+
+  .project-title {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .project-title {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 
 @media screen and (max-width: 1150px) {
@@ -373,12 +429,12 @@
   }
   
   .btns {
-    padding: 1px 2px;
+    padding: 12px 15px;
     font-size: 0px;
   }
   
   .tool-badge {
-    padding: 6px 10px;
+    padding: 8px 10px;
     font-size: 13px;
   }
 }

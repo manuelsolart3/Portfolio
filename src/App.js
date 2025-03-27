@@ -18,7 +18,7 @@ function App() {
           id="project"
           className="odd"
           projectTitle="SenaThreads | Red Social Empresarial"
-          projectDesc=" Desarrollé el backend de una aplicación que conecta a más de 300 empleados de distintas areas, creando un canal directo para compartir información, eventos y anuncios importantes,  mejorando la comunicación corporativa."
+          projectDesc=" Desarrollé el backend de una plataforma que conecta a más de 300 empleados de distintas areas, creando un canal directo para compartir información, eventos y anuncios importantes,  mejorando la comunicación corporativa."
           projectLink="https://github.com/manuelsolart3/SenaThreads"
           deployedProjectLink="https://test-sena-book.vercel.app/auth/"
           projectImg={require("./images/SenaThreads/Home.png")}
@@ -43,10 +43,36 @@ function App() {
 
         <ProjectCard
           id="project2"
-          projectTitle="SenaThreads | Red Social Empresarial"
-          projectDesc=" Desarrollé el backend de una aplicación que conecta a más de 300 empleados de distintas areas, creando un canal directo para compartir información, eventos y anuncios importantes,  mejorando la comunicación corporativa."
+          projectTitle="ComicVerse | Biblioteca Digital de Cómic"
+          projectDesc="Desarrollé una aplicación web fullstack que permite a usuarios explorar, gestionar y guardar colecciones personales de cómics. Implementé autenticación segura, sistema de favoritos y catálogo dinámico, conectando lectores con su contenido favorito."
+          projectLink="https://github.com/manuelsolart3/Bpo_API"
+       
+          projectImg={require("./images/Marvel/Login2.png")}
+          tools={[
+            ".NET","C#",
+            "SQL Server",
+            "Entity Framework Core",
+            "JWT",
+            "React",
+            "CSS3",
+            "JavaScript",
+            "HTML5",
+            "Tailwind CSS",
+          ]}
+          additionalImages={[
+            require("./images/Marvel/front.png"),
+            require("./images/Marvel/login.png"),
+            require("./images/Marvel/Favorite.png"),
+          ]}
+        />
+
+        <ProjectCard
+          id="project3"
+          className="odd"
+          projectTitle="ConnectUp | Plataforma de Gestión Empresarial"
+          projectDesc=" Desarrollé el backend de dos módulos fundamentales: un sistema de Beneficios Corporativos para gestión de prestaciones y CommsTool, plataforma que centraliza eventos y comunicados institucionales. "
           projectLink="https://github.com/manuelsolart3/SenaThreads"
-          deployedProjectLink="https://test-sena-book.vercel.app/auth/"
+          deployedProjectLink="https://www.connectup.cloud/auth"
           projectImg={require("./images/Commstool/Home.png")}
           tools={[
             ".NET & C#",
@@ -65,29 +91,13 @@ function App() {
           ]}
         />
         <ProjectCard
-          id="project3"
-          className="odd"
-          projectTitle="Bpo Labs"
-          projectDesc="React JS provided me the flexibility needed to create an interactive card with a glass-like effect, which adds a sense of depth and dimension to the user interface"
-          projectLink="https://github.com/manuelsolart3/Bpo_API"
-          deployedProjectLink="https://bpolabsolutions.com"
-          projectImg={require("./images/Marvel/Login2.png")}
-          tools={["React", "CSS3", "JavaScript", "Node.js", "Express"]}
-          additionalImages={[
-            require("./images/Marvel/front.png"),
-            require("./images/Marvel/login.png"),
-            require("./images/Marvel/Favorite.png"),
-          ]}
-        />
-
-        <ProjectCard
           id="project4"
-          projectTitle="Educatio MobileApp-Landing Page & Dashboard"
-          projectDesc="An approach to target and heal specific health conditions by transforming the living room into a yoga studio"
+          projectTitle="Educatio | Plataforma de Clases Personalizadas" 
+          projectDesc="Plataforma nacida de una necesidad personal que conecta estudiantes con docentes, facilitando clases personalizadas adaptadas a horarios y necesidades específicas. Un ecosistema tecnológico que transforma la forma de aprender, eliminando barreras tradicionales de acceso a la educación."
           projectLink="https://github.com/manuelsolart3/EducatioApp"
           deployedProjectLink="https://educatioweb.vercel.app/home"
           projectImg={require("./images/Educatio/EducatioHome.png")}
-          tools={["React", "Three.js", "GSAP", "Tailwind CSS"]}
+          tools={["Kotlin", "Android", "React", "JavaScript","Tailwind Css","MongoDb","Node.js","MERN"]}
           additionalImages={[
             require("./images/Educatio/Login.png"),
             require("./images/Educatio/History.png"),

@@ -10,8 +10,8 @@ export default function ContactForm({ id }) {
   const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    email: "", 
+    subject: "", 
     message: "",
   });
 
@@ -29,10 +29,10 @@ export default function ContactForm({ id }) {
 
     emailjs
       .sendForm(
-        "deepajha14",
-        "template_lyzbf0p",
+        "service_o4z35zz", // Your EmailJS Service ID
+        "template_i6841re", // Your EmailJS Template ID
         form.current,
-        "-8AsG2hlNcWfgWJFj"
+        "nDb3GCAPDaN_cISjW" // Your EmailJS Public Key
       )
       .then(
         (result) => {
@@ -47,10 +47,10 @@ export default function ContactForm({ id }) {
             progress: undefined,
             theme: "dark",
           });
-          // Reset form after successful submission
+
           setFormData({
-            name: "",
             email: "",
+            subject: "",
             message: "",
           });
         },
@@ -75,6 +75,7 @@ export default function ContactForm({ id }) {
         setIsSubmitting(false);
       });
   };
+
 
   return (
     <section
@@ -226,57 +227,57 @@ export default function ContactForm({ id }) {
             </div>
           </div>
 
-          <form ref={form} onSubmit={sendEmail} className="contact-form">
-            <div className="form-group">
-              <label htmlFor="name" className="form-label">
-                Nombre
-              </label>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Tu nombre completo"
-                className="form-input"
-                required
-                aria-required="true"
-              />
-            </div>
+           <form ref={form} onSubmit={sendEmail} className="contact-form">
+          <div className="form-group">
+            <label htmlFor="email" className="form-label">
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="correo@ejemplo.com"
+              className="form-input"
+              required
+              aria-required="true"
+            />
+          </div>
 
-            <div className="form-group">
-              <label htmlFor="email" className="form-label">
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="correo@ejemplo.com"
-                className="form-input"
-                required
-                aria-required="true"
-              />
-            </div>
+          <div className="form-group">
+            <label htmlFor="subject" className="form-label">
+              Asunto
+            </label>
+            <input
+              id="subject"
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              placeholder="Asunto de tu mensaje"
+              className="form-input"
+              required
+              aria-required="true"
+            />
+          </div>
 
-            <div className="form-group">
-              <label htmlFor="message" className="form-label">
-                Mensaje
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Describe tu proyecto o consulta"
-                className="form-textarea"
-                required
-                aria-required="true"
-              />
-            </div>
+          <div className="form-group">
+            <label htmlFor="message" className="form-label">
+              Mensaje
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Describe tu proyecto o consulta"
+              className="form-textarea"
+              required
+              aria-required="true"
+            />
+          </div>
 
             <button
               className={`submit-button ${isSubmitting ? "submitting" : ""}`}
