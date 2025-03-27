@@ -21,23 +21,23 @@ body {
   color: var(--text-primary);
 }
 
-/* Contenedor principal */
+
 .home {
-  min-height: 100vh;
+  min-height: 1150px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--bg-dark);
   overflow: hidden;
-  padding: 2rem 0;
+  padding: 2rem 20px;
 }
 
 .container {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .content-wrapper {

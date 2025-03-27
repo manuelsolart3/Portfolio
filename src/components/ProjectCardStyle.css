@@ -22,7 +22,7 @@
 
 .project-window {
   width: 100%;
-  padding: 0px 5vw 14vw 6vw;
+  padding: 20px 5vw 350px 6vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,9 +140,9 @@
 }
 
 /* Estilo específico para la imagen más grande (Educatio) */
-.project-wrapper.odd .project-img.educatio-img img {
-  max-width: 440px;
-  width: 100%;
+ .educatio-img img {
+  max-width: 380px ;
+  width: 100% ;
 }
 
 /* Estilos para los botones */
@@ -308,8 +308,8 @@
     margin-right: 60px;
   }
   
-  .project-wrapper.odd .project-img.educatio-img img {
-    max-width: 500px;
+ .educatio-img img {
+    max-width: 380px;
   }
 }
 
@@ -345,8 +345,8 @@
     max-width: 600px;
   }
   
-  .project-wrapper.odd .project-img.educatio-img img {
-    max-width: 100%;
+.educatio-img img {
+    max-width: 80%;
   }
   
   .project-buttons {

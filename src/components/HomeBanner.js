@@ -27,18 +27,18 @@ export default function HomeBanner({ id }) {
                   <img src={colombia} alt="Bandera de Colombia" width="20" className="flag" />
                   <span className="highlight">{" "}Especializado en .NET y C#</span> {" "}
                  Enfocado en la creación de  arquitecturas limpias para APIs escalables. Transformo{" "}
-                  requerimientos complejos en{" "}
+                 necesidades y requerimientos en{" "}
                   <span className="bold">soluciones técnicas únicas</span>.
                 </p>
 
                 <div className="button-group">
                   <a
-                    href="https://www.linkedin.com/in/manuel-solarte-229ba72b3/"
+                    href="https://drive.google.com/file/d/1feaFz8fKm0OPH1NWe9ezaaoxz5ME_Yzd/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn hire"
                   >
-                    Contratame
+                   Revisa mi Cv
                   </a>
                   <a href="#contact" className="btn contact">
                     Contacto
