@@ -20,7 +20,7 @@ export default function HomeBanner({ id }) {
           <div className="profile-info">
             <div className="content-section">
               <div className="intro">
-                <h1 className="name">Backend Developer</h1>
+                <h1 className="name">Desarrollador Backend</h1>
 
                 <div className="title-container">
                   <div className="role-main">
