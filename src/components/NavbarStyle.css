@@ -68,8 +68,6 @@
   transform: translateX(0);
 }
 
-
-
 .header .logo .logo-img span {
   font-weight: 300;
   color: var(--color-cream);
@@ -78,42 +76,25 @@
   margin-left: 10px;
   padding-right: 2px;
 }
-.header .logo:hover .logo-img span::after {
-  transform: scaleX(1);
-}
 
-.header .logo .logo-img span::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-pink), var(--color-magenta));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease-out;
-}
 .header .logo .logo-img .blink {
   animation: blink 4s infinite;
 }
+
 @keyframes blink {
-    0% {
-      color: var(--color-cream);
-      text-shadow: 0 0px 5px;;
-    }
-    30% {
-      color: var(--color-pink);
-      text-shadow: 0 0px 5px;;
-    }
-    70% {
-      color: var(--color-magenta);
-      text-shadow: 0 0px 5px;;
-
-
-    }
+  0% {
+    color: var(--color-cream);
+    text-shadow: 0 0px 5px;
   }
-
+  30% {
+    color: var(--color-pink);
+    text-shadow: 0 0px 5px;
+  }
+  70% {
+    color: var(--color-magenta);
+    text-shadow: 0 0px 5px;
+  }
+}
 
 .header .nav-menu {
   display: flex;
@@ -124,7 +105,6 @@
   margin: 0;
   padding: 0;
 }
-
 
 .nav-menu li {
   width: max-content;
@@ -139,43 +119,27 @@
 .nav-menu li .navLink {
   font-size: 24px;
   font-weight: 500;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
   color: var(--text-color);
   text-decoration: none;
   display: inline-block;
+  position: relative;
 }
 
-.navLink.active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-pink);
-  color: #ffe1a0;
-  animation: underline 0.3s ease-in-out;
-}
-.navLink.active {
-    color: var(--color-cream);
-    position: relative;
-    font-weight: bold;
-  }
-@keyframes underline {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
+/* Nuevo estilo para sección activa con efecto de gradiente */
+.nav-menu li .navLink.active-section {
+  background: linear-gradient(90deg, var(--color-cream), var(--color-magenta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  position: relative;
 }
 
 .nav-menu li .navLink:hover {
-  color: var(--color-cream);
-  transform: scale(1.1);
+  transform: scale(1.05);
+  text-shadow: 0 0 5px rgba(249, 72, 146, 0.5);
 }
-
 
 .nav-menu li:hover {
   transform: translateY(-3px);
@@ -240,5 +204,19 @@
   .nav-menu li .navLink {
     width: 100%;
     text-align: center;
+  }
+}
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 10px;
+  }
+
+  .header .logo .logo-img {
+    font-size: 30px;
+  }
+
+  .nav-menu li .navLink {
+    font-size: 24px;
   }
 }

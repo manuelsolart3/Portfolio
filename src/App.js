@@ -71,7 +71,7 @@ function App() {
           className="odd"
           projectTitle="ConnectUp | Plataforma de Gestión Empresarial"
           projectDesc=" Desarrollé el backend de dos módulos fundamentales: un sistema de Beneficios Corporativos para gestión de prestaciones y CommsTool, plataforma que centraliza eventos y comunicados institucionales. "
-          projectLink="https://github.com/manuelsolart3/SenaThreads"
+          projectLink="https://github.com/manuelsolart3/ApiCommstool"
           deployedProjectLink="https://www.connectup.cloud/auth"
           projectImg={require("./images/Commstool/Home.png")}
           tools={[

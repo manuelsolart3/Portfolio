@@ -171,7 +171,7 @@ body {
   font-size: 1.3rem;
   line-height: 1.5;
   color: var(--text-secondary);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .highlight {
@@ -331,11 +331,17 @@ body {
   
   .content-section {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .button-group,
   .social-links {
     justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
   
   .container {
@@ -344,20 +350,26 @@ body {
   
   h1 {
     font-size: 2.2rem;
+    text-align: center;
   }
   
   .role-main {
     font-size: 1.5rem;
     justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
   
   .description {
     font-size: 1.1rem;
+    text-align: center;
   }
   
   .photo-container {
     width: 240px;
     height: 320px;
+    margin: 0 auto;
   }
   
   .social-icon {
@@ -373,16 +385,38 @@ body {
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
+  }
+  
+  .button-group >  {
+    width: 100%;
+    text-align: center;
   }
   
   .role-main {
     font-size: 2.2rem;
     flex-direction: column;
     gap: 0;
+    align-items: center;
   }
   
   .photo-container {
     width: 200px;
     height: 280px;
+  }
+}
+
+/* Asegurar centrado general */
+@media screen and (max-width: 768px) {
+  * {
+    text-align: center;
+  }
+  
+  .content-section,
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }

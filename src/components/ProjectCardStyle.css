@@ -22,7 +22,7 @@
 
 .project-window {
   width: 100%;
-  padding: 20px 5vw 350px 6vw;
+  padding: 20px 5vw 250px 6vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -296,7 +296,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
 }
 
 .project-title {
@@ -440,23 +440,80 @@
 }
 
 
-/* Responsive adjustments */
-@media screen and (max-width: 600px) {
-  .image-modal-content {
-    width: 95%;
-    max-height: 90vh;
+/* IMPORTANTE: Estilos responsive FORZADOS para proyecto */
+@media screen and (max-width: 768px) {
+  body, html {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
-  .image-modal-gallery {
-    gap: 5px;
+  .project-detail-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
   }
 
-  .gallery-image {
-    width: 60px;
-    height: 60px;
+  .project-detail {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 15px !important;
   }
 
-  .main-project-image {
-    max-height: 50vh;
+  .project-description {
+    width: 100% !important;
+    text-align: center !important;
+    font-size: 14px !important;
+    padding: 0 10px !important;
+  }
+
+  .technologies-section {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin: 10px 0 !important;
+  }
+
+  .project-images {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+
+  .project-images img {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .pagination {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1000 !important;
   }
 }
+
+/* Para dispositivos muy pequeños */
+@media screen and (max-width: 375px) {
+  .project-detail-container {
+    padding: 5px !important;
+  }
+
+  .project-description {
+    font-size: 12px !important;
+  }
+}
+

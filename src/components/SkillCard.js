@@ -6,23 +6,21 @@ import {
   FaPuzzlePiece,
   FaDocker,
   FaDatabase,
-  FaGlobe   
+  FaGlobe,
 } from "react-icons/fa";
 import {
   SiDotnet,
-  SiCsharp,
-  SiMicrosoftsqlserver,
   SiMysql,
   SiJavascript,
   SiTailwindcss,
   SiReact,
-  SiVisualstudiocode,
-  SiAzuredevops,
-  SiRedux,
   SiMongodb,
   SiJsonwebtokens,
   SiTypescript,
 } from "react-icons/si";
+import { VscAzureDevops } from "react-icons/vsc";
+import { DiMsqlServer } from "react-icons/di";
+import { TbBrandCSharp } from "react-icons/tb";
 import { TbBrandCss3, TbBrandHtml5, TbApi } from "react-icons/tb";
 import { DiGit } from "react-icons/di";
 import "./SharedStyles.css";
@@ -39,7 +37,7 @@ export default function SkillCard() {
             <abbr title="C#">
               <div className="tech-wrapper">
                 <div className="tech-icon-container">
-                  <SiCsharp    className="techLogo" />
+                  <TbBrandCSharp className="techLogo" />
                 </div>
                 <span className="tech-name">C#</span>
               </div>
@@ -147,7 +145,7 @@ export default function SkillCard() {
             <abbr title="SQL Server">
               <div className="tech-wrapper">
                 <div className="tech-icon-container">
-                  <SiMicrosoftsqlserver className="techLogo" />
+                  <DiMsqlServer className="techLogo" />
                 </div>
                 <span className="tech-name">SQL Server</span>
               </div>
@@ -209,7 +207,7 @@ export default function SkillCard() {
             <abbr title="CI/CD">
               <div className="tech-wrapper">
                 <div className="tech-icon-container">
-                  <SiAzuredevops className="techLogo" />
+                  <VscAzureDevops className="techLogo" />
                 </div>
                 <span className="tech-name">CI/CD</span>
               </div>
@@ -220,22 +218,6 @@ export default function SkillCard() {
                   <FaDocker className="techLogo" />
                 </div>
                 <span className="tech-name">Docker</span>
-              </div>
-            </abbr>
-            <abbr title="Visual Studio Code">
-              <div className="tech-wrapper">
-                <div className="tech-icon-container">
-                  <SiVisualstudiocode className="techLogo" />
-                </div>
-                <span className="tech-name">VS Code</span>
-              </div>
-            </abbr>
-            <abbr title="Visual Studio Code">
-              <div className="tech-wrapper">
-                <div className="tech-icon-container">
-                  <SiVisualstudiocode className="techLogo" />
-                </div>
-                <span className="tech-name">Visual Studio</span>
               </div>
             </abbr>
           </div>

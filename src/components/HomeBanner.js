@@ -2,7 +2,15 @@ import React from "react";
 import "./HomeBannerStyle.css";
 import profilePhoto from "../images/ProfilePhotoWhite.png";
 import colombia from "../images/colombia.png";
-import { FaGithub, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { SiDailydotdev } from "react-icons/si";
+import {
+  FaGithub,
+  FaInstagram,
+  FaDev,
+  FaLinkedin,
+  FaEnvelope,
+} from "react-icons/fa";
+
 
 export default function HomeBanner({ id }) {
   return (
@@ -16,18 +24,23 @@ export default function HomeBanner({ id }) {
 
                 <div className="title-container">
                   <div className="role-main">
-      
                     <span className="role-backend"> Manuel</span>
                     <span className="role-developer">Solarte</span>
                   </div>
                 </div>
 
                 <p className="description">
-                  Desarrollador de Software de Popayán, Colombia{" "}
-                  <img src={colombia} alt="Bandera de Colombia" width="20" className="flag" />
-                  <span className="highlight">{" "}Especializado en .NET y C#</span> {" "}
-                 Enfocado en la creación de  arquitecturas limpias para APIs escalables. Transformo{" "}
-                 necesidades y requerimientos en{" "}
+                  Desarrollador de Software{" "}
+                  <span className="highlight"> Especializado en .NET y C#</span>{" "}
+                  de Popayán, Colombia{" "}
+                  <img
+                    src={colombia}
+                    alt="Bandera de Colombia"
+                    width="20"
+                    className="flag"
+                  />{" "}
+                  Enfocado en la creación de arquitecturas limpias para APIs
+                  escalables. Transformo necesidades y requerimientos en{" "}
                   <span className="bold">soluciones técnicas únicas</span>.
                 </p>
 
@@ -38,7 +51,7 @@ export default function HomeBanner({ id }) {
                     rel="noopener noreferrer"
                     className="btn hire"
                   >
-                   Revisa mi Cv
+                    Revisa mi Cv
                   </a>
                   <a href="#contact" className="btn contact">
                     Contacto
@@ -74,19 +87,19 @@ export default function HomeBanner({ id }) {
                     <FaLinkedin className="social" size={30} />
                   </a>
                   <a
-                    href="https://www.instagram.com/manuelsolar124/"
+                    href="https://app.daily.dev/manuelsolarte"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-icon"
-                    aria-label="Instagram"
+                    aria-label="daily.dev"
                   >
-                    <FaInstagram className="social" size={30} />
+                    <SiDailydotdev className="social" size={30} />
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div className="profile-section">
             <div className="photo-container">
               <img

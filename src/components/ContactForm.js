@@ -4,14 +4,15 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import { FaGithub, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import './SharedStyles.css'; 
+import "./SharedStyles.css";
 
 export default function ContactForm({ id }) {
   const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    email: "", 
-    subject: "", 
+    name: "",
+    email: "",
+    subject: "",
     message: "",
   });
 
@@ -27,12 +28,19 @@ export default function ContactForm({ id }) {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
     emailjs
-      .sendForm(
-        "service_o4z35zz", // Your EmailJS Service ID
-        "template_i6841re", // Your EmailJS Template ID
-        form.current,
-        "nDb3GCAPDaN_cISjW" // Your EmailJS Public Key
+      .send(
+        "service_pv8ezti",
+        "template_8d8v6xb",
+        templateParams,
+        "nDb3GCAPDaN_cISjW"
       )
       .then(
         (result) => {
@@ -49,6 +57,7 @@ export default function ContactForm({ id }) {
           });
 
           setFormData({
+            name: "",
             email: "",
             subject: "",
             message: "",
@@ -75,7 +84,6 @@ export default function ContactForm({ id }) {
         setIsSubmitting(false);
       });
   };
-
 
   return (
     <section
@@ -226,59 +234,74 @@ export default function ContactForm({ id }) {
               </div>
             </div>
           </div>
+          <form onSubmit={sendEmail} className="contact-form">
+            <div className="form-group">
+              <label htmlFor="name" className="form-label">
+                Nombre
+              </label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Tu nombre completo"
+                className="form-input"
+                required
+                aria-required="true"
+              />
+            </div>
 
-           <form ref={form} onSubmit={sendEmail} className="contact-form">
-          <div className="form-group">
-            <label htmlFor="email" className="form-label">
-              Email
-            </label>
-            <input
-              id="email"
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="correo@ejemplo.com"
-              className="form-input"
-              required
-              aria-required="true"
-            />
-          </div>
+            <div className="form-group">
+              <label htmlFor="email" className="form-label">
+                Email
+              </label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="correo@ejemplo.com"
+                className="form-input"
+                required
+                aria-required="true"
+              />
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="subject" className="form-label">
-              Asunto
-            </label>
-            <input
-              id="subject"
-              type="text"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              placeholder="Asunto de tu mensaje"
-              className="form-input"
-              required
-              aria-required="true"
-            />
-          </div>
+            <div className="form-group">
+              <label htmlFor="subject" className="form-label">
+                Asunto
+              </label>
+              <input
+                id="subject"
+                type="text"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                placeholder="Asunto de tu mensaje"
+                className="form-input"
+                required
+                aria-required="true"
+              />
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="message" className="form-label">
-              Mensaje
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Describe tu proyecto o consulta"
-              className="form-textarea"
-              required
-              aria-required="true"
-            />
-          </div>
-
+            <div className="form-group">
+              <label htmlFor="message" className="form-label">
+                Mensaje
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Describe tu proyecto o consulta"
+                className="form-textarea"
+                required
+                aria-required="true"
+              />
+            </div>
             <button
               className={`submit-button ${isSubmitting ? "submitting" : ""}`}
               type="submit"

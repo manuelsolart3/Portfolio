@@ -66,7 +66,7 @@ const ImageModal = ({ images, onClose }) => {
 };
 
 const ProjectsTitle = () => (
-  <h1 className="section-title">Mis Projectos</h1>
+  <h1 className="section-title">Mis Proyectos</h1>
 );
 
 export default function ProjectCard(props) {
@@ -137,9 +137,14 @@ export default function ProjectCard(props) {
   };
 
   return (
-    <>
-      {isFirstProject && <ProjectsTitle />}
-      <div className="project-window" id={props.id}>
+    <div className="project-section" id={props.id === "project" ? "project" : ""}>
+      {isFirstProject && (
+        <div className="projects-title-container">
+          <h1 className="section-title">Mis Proyectos</h1>
+        </div>
+      )}
+      
+      <div className="project-window">
         <div className={`project-wrapper ${props.className}`}>
           <div className="about-project">
             <div className="project-header">
@@ -202,6 +207,6 @@ export default function ProjectCard(props) {
           onClose={() => setShowImageModal(false)}
         />
       )}
-    </>
+    </div>
   );
 }

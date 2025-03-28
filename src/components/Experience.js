@@ -15,7 +15,7 @@ export default function Experience({ id }) {
       <div className="experience-header">
         <h1 className="section-title"> Mi Experiencia </h1>
         <p className="experience-tagline">
-          Transformando desafíos en soluciones de alto impacto
+      Experiencia no es solo tiempo, es lo que haces con él.
         </p>
       </div>
 
