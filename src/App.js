@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/react"
 import "./index.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -8,7 +8,6 @@ import ProjectCard from "./components/ProjectCard";
 import Experience from "./components/Experience";
 import SkillCard from "./components/SkillCard";
 import ContactForm from "./components/ContactForm";
-import { trackTimeOnPage, trackScrollDepth } from './components/analytics';
 
 function App() {
   return (
