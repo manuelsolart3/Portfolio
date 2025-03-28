@@ -323,6 +323,7 @@ body {
   .content-wrapper {
     flex-direction: column-reverse;
   }
+
   
   .profile-section,
   .profile-info {
@@ -366,11 +367,14 @@ body {
     text-align: center;
   }
   
-  .photo-container {
+   .photo-container {
     width: 240px;
     height: 320px;
-    margin: 0 auto;
+    margin: 0 auto; 
+    position: relative; 
+    top: 20px; 
   }
+
   
   .social-icon {
     width: 50px;
@@ -401,22 +405,23 @@ body {
   }
   
   .photo-container {
-    width: 200px;
-    height: 280px;
+    width: 180px;
+    height: 250px;
+    top: 35px; 
   }
 }
 
-/* Asegurar centrado general */
 @media screen and (max-width: 768px) {
   * {
     text-align: center;
   }
   
   .content-section,
-  .profile-section {
+   .profile-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 }
