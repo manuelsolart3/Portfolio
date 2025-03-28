@@ -14,7 +14,7 @@
   align-items: center;
 }
 
-.projects-heading { 
+.projects-heading {
   width: 100%;
   text-align: center;
   padding-bottom: 40px;
@@ -86,7 +86,7 @@
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 14px;
-  color: #FF9E80;
+  color: #ff9e80;
   font-weight: 500;
   border: 1px solid rgba(255, 158, 128, 0.2);
   transition: all 0.3s ease;
@@ -139,10 +139,10 @@
   cursor: pointer;
 }
 
-/* Estilo específico para la imagen más grande (Educatio) */
- .educatio-img img {
-  max-width: 380px ;
-  width: 100% ;
+/* Estilo específico  (Educatio) */
+.educatio-img img {
+  max-width: 380px;
+  width: 100%;
 }
 
 /* Estilos para los botones */
@@ -176,7 +176,6 @@
   gap: 20px;
 }
 
-/* Estilos para el modal de imágenes (mantén los estilos anteriores) */
 .image-modal-overlay {
   position: fixed;
   top: 0;
@@ -192,7 +191,7 @@
 }
 
 .image-modal-content {
-  background: #1E1E1E;
+  background: #1e1e1e;
   border-radius: 15px;
   width: 90%;
   max-width: 800px;
@@ -240,7 +239,7 @@
 
 .gallery-image.active {
   opacity: 1;
-  border-color: #F94892;
+  border-color: #f94892;
 }
 
 .gallery-image img {
@@ -289,7 +288,7 @@
 }
 .image-count {
   margin-top: 16px;
-  color: #F94892;
+  color: #f94892;
   font-size: 17px;
 }
 .project-header {
@@ -309,7 +308,7 @@
 .gallery-btn {
   background-color: rgba(255, 158, 128, 0.1);
   border: 1px solid rgba(255, 158, 128, 0.2);
-  color: #FF9E80;
+  color: #ff9e80;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -349,13 +348,12 @@
   }
 }
 
-
 @media screen and (max-width: 1150px) {
   .project-window {
     padding-left: 3vw;
     padding-right: 3vw;
   }
-  
+
   .project-img {
     margin-left: 60px;
   }
@@ -363,24 +361,25 @@
   .odd .project-img {
     margin-right: 60px;
   }
-  
- .educatio-img img {
+
+  .educatio-img img {
     max-width: 380px;
   }
 }
 
 @media screen and (max-width: 950px), screen and (max-height: 550px) {
-  .project-wrapper, .project-wrapper.odd {
+  .project-wrapper,
+  .project-wrapper.odd {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
-  
+
   .project-window {
     padding: 120px 25px 0;
   }
-  
+
   .about-project {
     width: 100%;
     max-width: 600px;
@@ -394,17 +393,18 @@
   .tools-container {
     justify-content: center;
   }
-  
-  .project-img, .odd .project-img {
+
+  .project-img,
+  .odd .project-img {
     margin: 0;
     width: 90%;
     max-width: 600px;
   }
-  
-.educatio-img img {
+
+  .educatio-img img {
     max-width: 80%;
   }
-  
+
   .project-buttons {
     justify-content: center;
   }
@@ -414,7 +414,7 @@
   .project-window {
     padding: 100px 15px 0;
   }
-  
+
   .section-title {
     font-size: 42px;
   }
@@ -427,22 +427,21 @@
   .about-project .desc {
     font-size: 18px;
   }
-  
+
   .btns {
     padding: 12px 15px;
     font-size: 0px;
   }
-  
+
   .tool-badge {
     padding: 8px 10px;
     font-size: 13px;
   }
 }
 
-
-/* IMPORTANTE: Estilos responsive FORZADOS para proyecto */
 @media screen and (max-width: 768px) {
-  body, html {
+  body,
+  html {
     max-width: 100%;
     overflow-x: hidden;
   }
@@ -516,4 +515,3 @@
     font-size: 12px !important;
   }
 }
-

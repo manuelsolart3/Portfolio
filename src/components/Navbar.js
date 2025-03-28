@@ -1,16 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './NavbarStyle.css';
+import React, { useState, useEffect, useRef } from "react";
+import "./NavbarStyle.css";
 
 export default function Navbar() {
   const [click, setClick] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
   const observerRef = useRef(null);
   const sectionRefs = useRef({
     home: null,
     project: null,
     experience: null,
     skills: null,
-    contact: null
+    contact: null,
   });
 
   const menuItems = [
@@ -18,28 +18,26 @@ export default function Navbar() {
     { to: "project", label: "Proyectos" },
     { to: "experience", label: "Experiencia" },
     { to: "skills", label: "Habilidades" },
-    { to: "contact", label: "Contacto" }
+    { to: "contact", label: "Contacto" },
   ];
 
   useEffect(() => {
-    // Configurar Intersection Observer
     observerRef.current = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
           }
         });
       },
-      { 
-        root: null, 
-        rootMargin: '0px', 
-        threshold: 0.4 // Ajusta este valor para cambiar sensibilidad
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.4,
       }
     );
 
-    // Observar todas las secciones
-    menuItems.forEach(item => {
+    menuItems.forEach((item) => {
       const section = document.getElementById(item.to);
       if (section) {
         sectionRefs.current[item.to] = section;
@@ -47,10 +45,9 @@ export default function Navbar() {
       }
     });
 
-    // Limpiar observer
     return () => {
       if (observerRef.current) {
-        menuItems.forEach(item => {
+        menuItems.forEach((item) => {
           const section = sectionRefs.current[item.to];
           if (section) observerRef.current.unobserve(section);
         });
@@ -63,10 +60,9 @@ export default function Navbar() {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      // Scroll suave con offset personalizado
       window.scrollTo({
-        top: section.offsetTop - 100, // Ajusta este valor según tu layout
-        behavior: 'smooth'
+        top: section.offsetTop - 100,
+        behavior: "smooth",
       });
       setClick(false);
     }
@@ -76,20 +72,22 @@ export default function Navbar() {
     <div className="header">
       <div className="logo">
         <div className="logo-img">
-          My<span className="blink">Portfolio</span>
+          Mi<span className="blink">Portafolio</span>
         </div>
       </div>
 
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         {menuItems.map((item) => (
           <li key={item.to}>
-            <a 
+            <a
               href={`#${item.to}`}
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection(item.to);
               }}
-              className={`navLink ${activeSection === item.to ? 'active-section' : ''}`}
+              className={`navLink ${
+                activeSection === item.to ? "active-section" : ""
+              }`}
             >
               {item.label}
             </a>

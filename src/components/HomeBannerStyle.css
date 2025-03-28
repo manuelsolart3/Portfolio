@@ -1,14 +1,18 @@
 :root {
   --color-cream: #ffe1a0;
   --color-pink: #f67280;
-  --color-magenta: #F94892;
-  --gradient: linear-gradient(45deg, var(--color-cream), var(--color-pink), var(--color-magenta));
+  --color-magenta: #f94892;
+  --gradient: linear-gradient(
+    45deg,
+    var(--color-cream),
+    var(--color-pink),
+    var(--color-magenta)
+  );
   --bg-dark: #0a0a0a;
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.8);
 }
 
-/* Reset y base */
 * {
   margin: 0;
   padding: 0;
@@ -16,11 +20,10 @@
 }
 
 body {
-  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-primary);
 }
-
 
 .home {
   min-height: 1150px;
@@ -80,7 +83,13 @@ body {
   inset: 0;
   border-radius: 50% / 40%;
   border: 6px solid transparent;
-  background: linear-gradient(45deg, var(--color-cream), var(--color-pink), var(--color-magenta)) border-box;
+  background: linear-gradient(
+      45deg,
+      var(--color-cream),
+      var(--color-pink),
+      var(--color-magenta)
+    )
+    border-box;
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -116,7 +125,6 @@ body {
 .intro {
   max-width: 100%;
 }
-
 
 .name {
   background-image: var(--gradient);
@@ -175,12 +183,12 @@ body {
 }
 
 .highlight {
-  color: var(--color-cream); 
+  color: var(--color-cream);
   font-weight: bold;
 }
 
 .important {
-  color: var(--accent-color); 
+  color: var(--accent-color);
 }
 
 .bold {
@@ -188,7 +196,7 @@ body {
 }
 
 .flag {
-  font-size: 1.2rem; 
+  font-size: 1.2rem;
   vertical-align: middle;
 }
 
@@ -250,7 +258,7 @@ body {
 }
 
 .social-icon::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -285,15 +293,15 @@ body {
   .role-main {
     font-size: 3rem;
   }
-  
+
   h1 {
     font-size: 3.5rem;
   }
-  
+
   .description {
     font-size: 1.3rem;
   }
-  
+
   .photo-container {
     width: 350px;
     height: 470px;
@@ -304,15 +312,15 @@ body {
   .role-main {
     font-size: 3rem;
   }
-  
+
   h1 {
     font-size: 3.5rem;
   }
-  
+
   .role-prefix {
     font-size: 1.5rem;
   }
-  
+
   .photo-container {
     width: 280px;
     height: 380px;
@@ -324,19 +332,18 @@ body {
     flex-direction: column-reverse;
   }
 
-  
   .profile-section,
   .profile-info {
     order: unset;
   }
-  
+
   .content-section {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .button-group,
   .social-links {
     justify-content: center;
@@ -344,16 +351,16 @@ body {
     align-items: center;
     width: 100%;
   }
-  
+
   .container {
     padding: 0 1.5rem;
   }
-  
+
   h1 {
     font-size: 2.2rem;
     text-align: center;
   }
-  
+
   .role-main {
     font-size: 1.5rem;
     justify-content: center;
@@ -361,21 +368,20 @@ body {
     align-items: center;
     width: 100%;
   }
-  
+
   .description {
     font-size: 1.1rem;
     text-align: center;
   }
-  
-   .photo-container {
+
+  .photo-container {
     width: 240px;
     height: 320px;
-    margin: 0 auto; 
-    position: relative; 
-    top: 20px; 
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
   }
 
-  
   .social-icon {
     width: 50px;
     height: 50px;
@@ -391,23 +397,23 @@ body {
     margin-right: auto;
     align-items: center;
   }
-  
-  .button-group >  {
+
+  .button-group > {
     width: 100%;
     text-align: center;
   }
-  
+
   .role-main {
     font-size: 2.2rem;
     flex-direction: column;
     gap: 0;
     align-items: center;
   }
-  
+
   .photo-container {
     width: 180px;
     height: 250px;
-    top: 35px; 
+    top: 35px;
   }
 }
 
@@ -415,9 +421,9 @@ body {
   * {
     text-align: center;
   }
-  
+
   .content-section,
-   .profile-section {
+  .profile-section {
     display: flex;
     flex-direction: column;
     align-items: center;

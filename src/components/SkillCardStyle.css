@@ -1,8 +1,13 @@
 :root {
   --color-cream: #ffe1a0;
   --color-pink: #f67280;
-  --color-magenta: #F94892;
-  --gradient: linear-gradient(45deg, var(--color-cream), var(--color-pink), var(--color-magenta));
+  --color-magenta: #f94892;
+  --gradient: linear-gradient(
+    45deg,
+    var(--color-cream),
+    var(--color-pink),
+    var(--color-magenta)
+  );
   --bg-dark: #0a0a0a;
   --text-primary: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.8);
@@ -13,7 +18,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding:  0px 0% 250px 0%;
+  padding: 0px 0% 250px 0%;
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
@@ -28,7 +33,7 @@
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -79,12 +84,11 @@
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
-  overflow: visible; /* Permite que se vea el borde fuera del contenedor */
+  overflow: visible;
 }
 
-/* Capa para el fondo con gradiente */
 .tech-icon-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -97,24 +101,22 @@
   border-radius: 15px;
 }
 
-/* Borde blanco exterior perfectamente centrado */
 .tech-icon-container::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -4px;
   left: -4px;
   right: -4px;
   bottom: -4px;
   border: 2px solid #ffffff;
-  border-radius: 19px; /* Ligeramente más grande que el contenedor */
+  border-radius: 19px;
   opacity: 0;
   transform: scale(0.9);
   transition: all 0.3s ease;
   z-index: -1;
-  box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.5); /* Sombra blanca */
+  box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.5);
 }
 
-/* Reducimos la escala en hover para evitar tapar el nombre */
 .tech-wrapper:hover .tech-icon-container {
   transform: scale(1.05);
   box-shadow: 0px 5px 15px rgba(249, 72, 146, 0.4);
@@ -124,7 +126,6 @@
   opacity: 1;
 }
 
-/* Animación del borde blanco */
 .tech-wrapper:hover .tech-icon-container::after {
   opacity: 1;
   transform: scale(1);
@@ -147,7 +148,7 @@
 /* Ajustamos la posición del nombre para que no sea tapado */
 .tech-name {
   position: absolute;
-  bottom: -30px; 
+  bottom: -30px;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
@@ -163,7 +164,6 @@
   transform: translateY(0);
 }
 
-/* Ajustamos la altura del wrapper para acomodar el nombre */
 .tech-wrapper {
   position: relative;
   display: flex;
@@ -173,13 +173,13 @@
   transition: all 0.3s ease;
   height: 130px;
 }
-/* Media Queries para diseño responsive */
+
 @media screen and (min-width: 768px) {
   .skills-wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
-  
+
   .section-title {
     font-size: 3rem;
   }
@@ -190,20 +190,20 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
   }
-  
+
   .skill-box h2 {
     font-size: 2rem;
   }
-  
+
   .skillset {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
-  
+
   .tech-icon-container {
     width: 110px;
     height: 110px;
   }
-  
+
   .techLogo {
     width: 60px;
     height: 60px;
@@ -214,41 +214,41 @@
   .skill-container {
     padding: 40px 0;
   }
-  
+
   .section-title {
     font-size: clamp(1.7rem, 7vw, 2rem) !important;
     margin-bottom: 40px;
     text-align: center;
   }
-  
+
   .skill-box h2 {
     font-size: 1.2rem;
     text-align: center;
   }
-  
+
   .skillset {
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 9px !important;
   }
-  
+
   .tech-icon-container {
     width: 72px !important;
     height: 72px !important;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
+
   .techLogo {
     width: 45px;
     height: 45px;
   }
-  
+
   .tech-name {
     font-size: 12px;
     bottom: -20px;
   }
-  
+
   .tech-wrapper {
     height: 100px;
   }
@@ -258,22 +258,22 @@
   .skills-wrapper {
     gap: 30px;
   }
-  
+
   .skillset {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 15px;
   }
-  
+
   .tech-icon-container {
     width: 80px;
     height: 80px;
   }
-  
+
   .techLogo {
     width: 40px;
     height: 40px;
   }
-  
+
   .tech-wrapper {
     height: 90px;
   }

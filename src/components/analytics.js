@@ -6,7 +6,7 @@ export const trackTimeOnPage = () => {
 
   window.addEventListener("beforeunload", () => {
     const endTime = new Date().getTime();
-    const timeSpent = (endTime - startTime) / 1000; // en segundos
+    const timeSpent = (endTime - startTime) / 1000; 
 
     ReactGA.event({
       category: "User Engagement",

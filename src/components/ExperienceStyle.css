@@ -1,5 +1,10 @@
 :root {
-  --gradient: linear-gradient(45deg, var(--color-cream), var(--color-pink), var(--color-magenta));
+  --gradient: linear-gradient(
+    45deg,
+    var(--color-cream),
+    var(--color-pink),
+    var(--color-magenta)
+  );
 }
 
 .experience-container {
@@ -18,7 +23,7 @@
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 15px;
-  background: linear-gradient(45deg, #FF8080, #FF9E80);
+  background: linear-gradient(45deg, #ff8080, #ff9e80);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -36,29 +41,39 @@
   padding: 30px;
   margin-bottom: 40px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  border-left: 3px solid #FF8080;
-  border-right: 3px solid #FF9E80;
+  border-left: 3px solid #ff8080;
+  border-right: 3px solid #ff9e80;
   position: relative;
 }
 
 .job-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 10px;
   right: 10px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 158, 128, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 158, 128, 0.3),
+    transparent
+  );
 }
 
 .job-card::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 10px;
   right: 10px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 128, 128, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 128, 128, 0.3),
+    transparent
+  );
 }
 
 .job-header {
@@ -79,7 +94,7 @@
 
 .company {
   font-size: 23px;
-  color: #FF8080;
+  color: #ff8080;
   font-weight: 500;
   text-decoration: none;
   position: relative;
@@ -88,20 +103,20 @@
 }
 
 .company::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #FF8080, #FF9E80);
+  background: linear-gradient(90deg, #ff8080, #ff9e80);
   transform-origin: right;
   transform: scaleX(1);
   transition: transform 0.3s ease;
 }
 
 .company:hover {
-  color: #FF9E80;
+  color: #ff9e80;
 }
 
 .job-period {
@@ -132,7 +147,7 @@
 }
 
 .project-title-link:hover .project-title {
-  color: #FF9E80;
+  color: #ff9e80;
 }
 
 .achievement-container {
@@ -144,7 +159,7 @@
 .achievement-icon {
   flex: 0 0 40px;
   height: 40px;
-  background: linear-gradient(135deg, #FF8080, #FF9E80);
+  background: linear-gradient(135deg, #ff8080, #ff9e80);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -170,7 +185,7 @@
 }
 
 .achievement-content span {
-  color: #FF9E80;
+  color: #ff9e80;
   font-weight: 600;
 }
 
@@ -198,7 +213,7 @@
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 14px;
-  color: #FF9E80;
+  color: #ff9e80;
   font-weight: 500;
   border: 1px solid rgba(255, 158, 128, 0.2);
   transition: all 0.3s ease;
@@ -209,7 +224,6 @@
   transform: translateY(-2px);
 }
 
-/* Responsive Improvements for Mobile */
 @media screen and (max-width: 1200px) {
   .experience-container {
     padding: 50px 5% 3%;
@@ -220,7 +234,7 @@
   .experience-container {
     padding: 40px 4% 3%;
   }
-  
+
   .job-card {
     padding: 15px;
     margin-bottom: 15px;
@@ -231,17 +245,17 @@
   .experience-container {
     padding: 30px 3% 3%;
   }
-  
+
   .experience-header .section-title {
     font-size: 28px;
     text-align: center;
   }
-  
+
   .job-header {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .job-period {
     align-self: flex-start;
     margin-top: 5px;
@@ -258,12 +272,12 @@
     border-radius: 10px;
     margin-bottom: 10px;
   }
-  
+
   .achievement-container {
     align-items: flex-start;
     gap: 8px;
   }
-  
+
   .achievement-icon {
     margin-top: 2px;
     flex: 0 0 30px;
@@ -271,38 +285,37 @@
     width: 30px;
     font-size: 14px;
   }
-  
+
   .achievement-text {
     font-size: 14px;
   }
-  
+
   .tech-stack {
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
   }
-  
+
   .tech-pills {
     width: 100%;
     margin-top: 5px;
     font-size: 12px;
   }
-  
+
   .job-title-container h3 {
     font-size: 18px;
     margin-bottom: 5px;
   }
-  
+
   .company {
     font-size: 16px;
   }
-  
+
   .project-title {
     font-size: 16px;
   }
 }
 
-/* Extra small devices */
 @media screen and (max-width: 375px) {
   .experience-container {
     padding: 15px 1%;
