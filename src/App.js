@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import ReactGA from "react-ga4";
+import { Analytics } from "@vercel/analytics/react";
 import "./index.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -11,17 +11,6 @@ import ContactForm from "./components/ContactForm";
 import { trackTimeOnPage, trackScrollDepth } from './components/analytics';
 
 function App() {
-  useEffect(() => {
-    ReactGA.initialize("G-60CPE6WVF5");
-
-    trackTimeOnPage();
-    trackScrollDepth();
-
-    ReactGA.send({
-      hitType: "pageview",
-      page: window.location.pathname + window.location.search,
-    });
-  }, []);
   return (
     <>
       <div>
@@ -134,6 +123,7 @@ function App() {
         <ContactForm id="contact" />
         <Footer />
       </div>
+      <Analytics />
     </>
   );
 }
