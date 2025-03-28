@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ReactGA from "react-ga4";
 import "./index.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -7,7 +8,20 @@ import ProjectCard from "./components/ProjectCard";
 import Experience from "./components/Experience";
 import SkillCard from "./components/SkillCard";
 import ContactForm from "./components/ContactForm";
+import { trackTimeOnPage, trackScrollDepth } from './components/analytics';
+
 function App() {
+  useEffect(() => {
+    ReactGA.initialize("G-60CPE6WVF5");
+
+    trackTimeOnPage();
+    trackScrollDepth();
+
+    ReactGA.send({
+      hitType: "pageview",
+      page: window.location.pathname + window.location.search,
+    });
+  }, []);
   return (
     <>
       <div>
@@ -46,10 +60,10 @@ function App() {
           projectTitle="ComicVerse | Biblioteca Digital de Cómic"
           projectDesc="Desarrollé una aplicación web fullstack que permite a usuarios explorar, gestionar y guardar colecciones personales de cómics. Implementé autenticación segura, sistema de favoritos y catálogo dinámico, conectando lectores con su contenido favorito."
           projectLink="https://github.com/manuelsolart3/Bpo_API"
-       
           projectImg={require("./images/Marvel/Login2.png")}
           tools={[
-            ".NET","C#",
+            ".NET",
+            "C#",
             "SQL Server",
             "Entity Framework Core",
             "JWT",
@@ -92,12 +106,21 @@ function App() {
         />
         <ProjectCard
           id="project4"
-          projectTitle="Educatio | Plataforma de Clases Personalizadas" 
+          projectTitle="Educatio | Plataforma de Clases Personalizadas"
           projectDesc="Plataforma nacida de una necesidad personal que conecta estudiantes con docentes, facilitando clases personalizadas adaptadas a horarios y necesidades específicas. Un ecosistema tecnológico que transforma la forma de aprender, eliminando barreras tradicionales de acceso a la educación."
           projectLink="https://github.com/manuelsolart3/EducatioApp"
           deployedProjectLink="https://educatioweb.vercel.app/home"
           projectImg={require("./images/Educatio/EducatioHome.png")}
-          tools={["Kotlin", "Android", "React", "JavaScript","Tailwind Css","MongoDb","Node.js","MERN"]}
+          tools={[
+            "Kotlin",
+            "Android",
+            "React",
+            "JavaScript",
+            "Tailwind Css",
+            "MongoDb",
+            "Node.js",
+            "MERN",
+          ]}
           additionalImages={[
             require("./images/Educatio/Login.png"),
             require("./images/Educatio/History.png"),

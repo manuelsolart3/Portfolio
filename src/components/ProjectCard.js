@@ -5,7 +5,7 @@ import {
   FaTimes,
   FaSearchPlus,
   FaSearchMinus,
-  FaPlus
+  FaPlus,
 } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { TbScreenShare } from "react-icons/tb";
@@ -23,12 +23,12 @@ const ImageModal = ({ images, onClose }) => {
 
   const toggleZoom = useCallback((e) => {
     if (!imageRef.current) return;
-    setIsZoomed(prev => !prev);
+    setIsZoomed((prev) => !prev);
   }, []);
 
   return (
     <div className="image-modal-overlay" onClick={onClose}>
-      <div className="image-modal-content" onClick={e => e.stopPropagation()}>
+      <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="image-modal-close" onClick={onClose}>
           <FaTimes color="#FF9E80" />
         </button>
@@ -37,7 +37,9 @@ const ImageModal = ({ images, onClose }) => {
           {images.map((img, index) => (
             <div
               key={index}
-              className={`gallery-image ${index === currentImageIndex ? "active" : ""}`}
+              className={`gallery-image ${
+                index === currentImageIndex ? "active" : ""
+              }`}
               onClick={() => handleImageChange(index)}
             >
               <img src={img} alt={`Project view ${index + 1}`} />
@@ -50,14 +52,22 @@ const ImageModal = ({ images, onClose }) => {
             ref={imageRef}
             src={images[currentImageIndex]}
             alt={`Main project view ${currentImageIndex + 1}`}
-            className={`main-project-image ${isZoomed ? 'zoomed' : ''}`}
+            className={`main-project-image ${isZoomed ? "zoomed" : ""}`}
             onClick={toggleZoom}
           />
           <div className="image-count">
             {currentImageIndex + 1} / {images.length}
           </div>
           <div className="zoom-indicator">
-            {isZoomed ? <><FaSearchMinus /> Zoom Out</> : <><FaSearchPlus /> Zoom In</>}
+            {isZoomed ? (
+              <>
+                <FaSearchMinus /> Zoom Out
+              </>
+            ) : (
+              <>
+                <FaSearchPlus /> Zoom In
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -65,9 +75,7 @@ const ImageModal = ({ images, onClose }) => {
   );
 };
 
-const ProjectsTitle = () => (
-  <h1 className="section-title">Mis Proyectos</h1>
-);
+const ProjectsTitle = () => <h1 className="section-title">Mis Proyectos</h1>;
 
 export default function ProjectCard(props) {
   const [showImageModal, setShowImageModal] = useState(false);
@@ -80,51 +88,49 @@ export default function ProjectCard(props) {
   const isEducatio = props.id === "project4";
   const isFirstProject = props.id === "project";
 
-  // Determine which buttons to render based on available links
   const renderButtons = () => {
     const buttons = [];
 
-    // Always add GitHub button
-    buttons.push({ 
-      text: "View on", 
-      icon: FiGithub, 
-      onClick: () => openLink(props.projectLink) 
+    buttons.push({
+      text: "View on",
+      icon: FiGithub,
+      onClick: () => openLink(props.projectLink),
     });
 
-    // Conditionally add Demo button
     if (props.deployedProjectLink) {
-      buttons.push({ 
-        text: "Demo", 
-        icon: TbScreenShare, 
-        onClick: () => openLink(props.deployedProjectLink) 
+      buttons.push({
+        text: "Demo",
+        icon: TbScreenShare,
+        onClick: () => openLink(props.deployedProjectLink),
       });
     }
 
     return buttons.map(({ text, icon: Icon, onClick }, index) => (
-      <button 
-        key={index} 
-        className="btns" 
+      <button
+        key={index}
+        className="btns"
         onClick={onClick}
-        style={{ 
-          // If only one button, center it or make it full width
-          ...(buttons.length === 1 ? { 
-            margin: '0 auto', 
-            display: 'flex',
-            justifyContent: 'center' 
-          } : {}) 
+        style={{
+          ...(buttons.length === 1
+            ? {
+                margin: "0 auto",
+                display: "flex",
+                justifyContent: "center",
+              }
+            : {}),
         }}
       >
         <span>
           {text}
-          <Icon 
-            className="social" 
-            size={21} 
+          <Icon
+            className="social"
+            size={21}
             style={{
               marginLeft: "10px",
               position: "relative",
               top: "2px",
-              strokeWidth: "3"
-            }} 
+              strokeWidth: "3",
+            }}
           />
         </span>
         <FaArrowRight
@@ -137,13 +143,16 @@ export default function ProjectCard(props) {
   };
 
   return (
-    <div className="project-section" id={props.id === "project" ? "project" : ""}>
+    <div
+      className="project-section"
+      id={props.id === "project" ? "project" : ""}
+    >
       {isFirstProject && (
         <div className="projects-title-container">
           <h1 className="section-title">Mis Proyectos</h1>
         </div>
       )}
-      
+
       <div className="project-window">
         <div className={`project-wrapper ${props.className}`}>
           <div className="about-project">
@@ -151,8 +160,8 @@ export default function ProjectCard(props) {
               <h2 className="project-title">
                 {props.projectTitle}
                 {hasAdditionalImages && (
-                  <button 
-                    className="gallery-btn" 
+                  <button
+                    className="gallery-btn"
                     onClick={() => setShowImageModal(true)}
                   >
                     <FaPlus />
@@ -176,9 +185,7 @@ export default function ProjectCard(props) {
               </div>
             )}
 
-            <div className="project-buttons">
-              {renderButtons()}
-            </div>
+            <div className="project-buttons">{renderButtons()}</div>
           </div>
 
           <Tilt
