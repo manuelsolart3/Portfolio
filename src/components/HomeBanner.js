@@ -11,7 +11,6 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 
-
 export default function HomeBanner({ id }) {
   return (
     <div className="home" id={id}>
@@ -46,13 +45,14 @@ export default function HomeBanner({ id }) {
 
                 <div className="button-group">
                   <a
-                    href="https://drive.google.com/file/d/1feaFz8fKm0OPH1NWe9ezaaoxz5ME_Yzd/view?usp=sharing"
+                    href="/Cv_Backend.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn hire"
                   >
                     Revisa mi Cv
                   </a>
+
                   <a href="#contact" className="btn contact">
                     Contacto
                   </a>
