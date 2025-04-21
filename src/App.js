@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 import "./index.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -22,7 +22,6 @@ function App() {
           projectTitle="SenaThreads | Red Social Empresarial"
           projectDesc=" Desarrollé el backend de una plataforma que conecta a más de 300 empleados de distintas areas, creando un canal directo para compartir información, eventos y anuncios importantes,  mejorando la comunicación corporativa."
           projectLink="https://github.com/manuelsolart3/SenaThreads"
-          deployedProjectLink="https://test-sena-book.vercel.app/auth/"
           projectImg={require("./images/SenaThreads/Home.png")}
           tools={[
             ".NET & C#",
@@ -45,6 +44,31 @@ function App() {
 
         <ProjectCard
           id="project2"
+          projectTitle="ConnectUp | Plataforma de Gestión Empresarial"
+          projectDesc=" Desarrollé el backend de dos módulos fundamentales: un sistema de Beneficios Corporativos para gestión de prestaciones y CommsTool, plataforma que centraliza eventos y comunicados institucionales. "
+          projectLink="https://github.com/manuelsolart3/ApiCommstool"
+          deployedProjectLink="https://www.connectup.cloud/auth"
+          projectImg={require("./images/Commstool/Home.png")}
+          tools={[
+            ".NET & C#",
+            "ASP.NET Core",
+            "Entity Framework Core",
+            "JWT",
+            "xUnit/NUnit Testing",
+            "SQL Server",
+          ]}
+          additionalImages={[
+            require("./images/Commstool/Login.png"),
+            require("./images/Commstool/Home1.png"),
+            require("./images/Commstool/Edit2.png"),
+            require("./images/Commstool/Edit1.png"),
+            require("./images/Commstool/Edit3.png"),
+          ]}
+        />
+
+        <ProjectCard
+          id="project3"
+          className="odd"
           projectTitle="ComicVerse | Biblioteca Digital de Cómic"
           projectDesc="Desarrollé una aplicación web fullstack que permite a usuarios explorar, gestionar y guardar colecciones personales de cómics. Implementé autenticación segura, sistema de favoritos y catálogo dinámico, conectando lectores con su contenido favorito."
           projectLink="https://github.com/manuelsolart3/Bpo_API"
@@ -68,30 +92,6 @@ function App() {
           ]}
         />
 
-        <ProjectCard
-          id="project3"
-          className="odd"
-          projectTitle="ConnectUp | Plataforma de Gestión Empresarial"
-          projectDesc=" Desarrollé el backend de dos módulos fundamentales: un sistema de Beneficios Corporativos para gestión de prestaciones y CommsTool, plataforma que centraliza eventos y comunicados institucionales. "
-          projectLink="https://github.com/manuelsolart3/ApiCommstool"
-          deployedProjectLink="https://www.connectup.cloud/auth"
-          projectImg={require("./images/Commstool/Home.png")}
-          tools={[
-            ".NET & C#",
-            "ASP.NET Core",
-            "Entity Framework Core",
-            "JWT",
-            "xUnit/NUnit Testing",
-            "SQL Server",
-          ]}
-          additionalImages={[
-            require("./images/Commstool/Login.png"),
-            require("./images/Commstool/Home1.png"),
-            require("./images/Commstool/Edit2.png"),
-            require("./images/Commstool/Edit1.png"),
-            require("./images/Commstool/Edit3.png"),
-          ]}
-        />
         <ProjectCard
           id="project4"
           projectTitle="Educatio | Plataforma de Clases Personalizadas"

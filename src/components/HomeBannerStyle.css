@@ -62,6 +62,7 @@ body {
   order: 2;
   display: flex;
   justify-content: flex-end;
+    padding: 0px 1vw 115px 0vw;
 }
 
 /* Sección de perfil */
@@ -221,7 +222,7 @@ body {
 
 .btn.hire {
   background-image: var(--gradient);
-  color: #fff;
+  color: #ffffff;
   border: none;
 }
 
@@ -322,8 +323,8 @@ body {
   }
 
   .photo-container {
-    width: 280px;
-    height: 380px;
+    width: 300px;
+    height: 400px;
   }
 }
 

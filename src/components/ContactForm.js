@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import { FaGithub, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import "./SharedStyles.css";
-
+import { SiDailydotdev } from "react-icons/si";
 export default function ContactForm({ id }) {
   const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -224,12 +224,12 @@ export default function ContactForm({ id }) {
                   <FaLinkedin className="social" size={30} />
                 </a>
                 <a
-                  href="https://www.instagram.com/manuelsolar124/"
+                  href="https://app.daily.dev/manuelsolarte"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-icon"
                 >
-                  <FaInstagram className="social" size={30} />
+                  <SiDailydotdev className="social" size={30} />
                 </a>
               </div>
             </div>
