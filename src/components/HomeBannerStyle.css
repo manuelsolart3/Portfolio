@@ -380,7 +380,7 @@ body {
     height: 320px;
     margin: 0 auto;
     position: relative;
-    top: 20px;
+    top: 70px;
   }
 
   .social-icon {
@@ -397,6 +397,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     align-items: center;
+    top: 50px;
   }
 
   .button-group > {
@@ -415,6 +416,13 @@ body {
     width: 180px;
     height: 250px;
     top: 35px;
+  }
+  .photo-container {
+    width: 240px;
+    height: 320px;
+    margin: 0 auto;
+    position: relative;
+    top: 90px;
   }
 }
 
