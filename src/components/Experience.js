@@ -19,6 +19,82 @@ export default function Experience({ id }) {
         </p>
       </div>
 
+{/* NUEVA EXPERIENCIA: TECNOFACTORY */}
+<div className="job-card">
+  <div className="job-header">
+    <div className="job-title-container">
+      <h3>Desarrollador Backend</h3>
+      <span className="company">Tecnofactory</span>
+    </div>
+    <span className="job-period">Enero 2025 – Actualidad</span>
+  </div>
+
+  <div className="project-section">
+    <a href="https://mintic.gov.co/micrositios/lineas-fomento/839/w3-channel.html" className="project-title-link">
+      <h4 className="project-title">
+        Fomento TIC — MinTIC (Ministerio de Tecnologías de la Información de Colombia)
+      </h4>
+    </a>
+
+    <div className="achievement-container">
+      <div className="achievement-icon">
+        <FaBuilding />
+      </div>
+      <div className="achievement-content">
+        <h5>Contexto e Impacto</h5>
+        <p>
+          Proyecto nacional para conectar a más de <span>21.000 hogares</span> en zonas rurales de Colombia
+          mediante proveedores locales de Internet.
+        </p>
+      </div>
+    </div>
+
+    <div className="achievement-container">
+      <div className="achievement-icon">
+        <FaCode />
+      </div>
+      <div className="achievement-content">
+        <h5>Desarrollo Backend</h5>
+        <p>
+          Diseño e implemento desde cero <span>módulos internos</span> para funcionarios del Ministerio,
+          habilitando registro, consulta y gestión de <span>beneficiarios, convenios y comunidades</span>.
+          Aplico Clean Architecture, principios SOLID y patrones de diseño para asegurar mantenibilidad,
+          organización del código y preparación para escalabilidad futura.
+        </p>
+      </div>
+    </div>
+
+    <div className="achievement-container">
+      <div className="achievement-icon">
+        <FaUsers />
+      </div>
+      <div className="achievement-content">
+        <h5>Entregas Ágiles y Colaboración</h5>
+        <p>
+          Coordinación directa con el líder técnico y el frontend, logrando entregas funcionales en ciclos de
+          <span> menos de 2 semanas</span>, alineadas con estándares de calidad y requerimientos públicos.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div className="tech-stack">
+    <div className="tech-title">Tecnologías:</div>
+    <div className="tech-pills">
+      <span className="tech-pill">.NET</span>
+      <span className="tech-pill">C#</span>
+      <span className="tech-pill">ASP.NET Core</span>
+      <span className="tech-pill">Entity Framework Core</span>
+      <span className="tech-pill">SQL Server</span>
+      <span className="tech-pill">Git</span>
+      <span className="tech-pill">React</span>
+      <span className="tech-pill">Angular</span>
+      <span className="tech-pill">Azure DevOps</span>
+    </div>
+  </div>
+</div>
+
+{/* EXPERIENCIA: BPOLABS */}
       <div className="job-card">
         <div className="job-header">
           <div className="job-title-container">
