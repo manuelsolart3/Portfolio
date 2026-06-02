@@ -67,9 +67,9 @@ body {
 
 /* Sección de perfil */
 .photo-container {
-  width: 300px;
-  height: 400px;
-  border-radius: 50% / 40%;
+  width: 200px;
+  height: 100px;
+  border-radius: 10% / 40%;
   position: relative;
   box-shadow: 0 5px 30px rgba(249, 72, 146, 0.25);
   overflow: hidden;
