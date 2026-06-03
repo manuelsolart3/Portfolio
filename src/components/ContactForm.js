@@ -35,13 +35,13 @@ export default function ContactForm({ id }) {
       message: formData.message,
     };
 
-    emailjs
-      .send(
-        "service_pv8ezti",
-        "template_8d8v6xb",
-        templateParams,
-        "nDb3GCAPDaN_cISjW"
-      )
+   emailjs
+  .send(
+    "service_kaa237d",  
+    "template_8d8v6xb",
+    templateParams,
+    "nDb3GCAPDaN_cISjW"
+  )
       .then(
         (result) => {
           console.log(result.text);
