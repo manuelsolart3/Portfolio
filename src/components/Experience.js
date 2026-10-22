@@ -26,7 +26,7 @@ export default function Experience({ id }) {
       <h3>Desarrollador Backend</h3>
       <span className="company">Tecnofactory</span>
     </div>
-    <span className="job-period">Enero 2025 – Actualidad</span>
+    <span className="job-period">Junio 2025 – Actualidad</span>
   </div>
 
   <div className="project-section">
@@ -108,7 +108,7 @@ export default function Experience({ id }) {
               BpoLabSolutions
             </a>
           </div>
-          <span className="job-period">Febrero 2024 – Enero 2025</span>
+          <span className="job-period">Febrero 2024 – Diciembre 2025</span>
         </div>
 
         <div className="project-section">
